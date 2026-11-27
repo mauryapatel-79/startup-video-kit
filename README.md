@@ -9,7 +9,7 @@ Make launch videos, product demos and social ads for your startup with **Claude 
 ## How it works
 
 ```
-your URL or brief ──► BRIEF.md ──► SCRIPT.md ──► voice + captions ──► scenes (HTML) ──► check ──► MP4 16:9 / 9:16 / 1:1
+your URL ──► brand.json ──► BRIEF.md ──► SCRIPT.md ──► voice + captions ──► scenes (HTML) ──► check ──► MP4 16:9 / 9:16 / 1:1
                       agent fills   you approve   free or premium      HyperFrames        lint +     + poster, .srt,
                       from your site                                    + real UI          review     hero loop
 ```
@@ -77,6 +77,30 @@ npx skills add mauryapatel-79/startup-video-kit
 | Cursor, Gemini CLI, Copilot | `AGENTS.md` + skills installed by `npx skills` |
 | Claude.ai / ChatGPT (no install) | Add the [HyperFrames connector](https://hyperframes.heygen.com/guides/mcp) and paste [`skills/startup-video/SKILL.md`](skills/startup-video/SKILL.md) into the chat |
 
+## Brand memory: research a brand once
+
+Every brand gets a folder in `brands/` holding its facts, colours, fonts, logos, voice and rules. The agent captures it the first time and reads it every time after, so the second video for a brand starts with no research.
+
+```bash
+node scripts/brand.mjs init https://your-startup.com   # capture site → brands/your-startup/ (draft)
+node scripts/brand.mjs check your-startup              # errors: missing CTA, bad colours, unsourced facts
+node scripts/brand.mjs list                            # every brand, status, videos made
+```
+
+| In `brands/<slug>/` | What |
+| --- | --- |
+| `brand.json` | Name, one-liner, audience, features, **facts** (each with source URL, date, verified flag), pricing, CTA, voice, colours, rules (`say` / `never`), history of videos made |
+| `assets/logos/`, `assets/fonts/` | The brand's own logo and font files |
+| `screens/` | Site screenshots from the last capture |
+| `sources/` | The captured site text, dated: where every fact came from |
+
+- Numbers in a video come only from `brand.json` facts. New facts are added there first, with their source.
+- `check` flags facts older than 180 days and facts nobody has verified.
+- Corrections you give the agent are written back, so they stick for the next video.
+- Your brands are git-ignored; only [the kit's own brand](brands/startup-video-kit/brand.json) is committed as an example.
+
+Details: [brand.md](skills/startup-video/references/brand.md).
+
 ## Voice options
 
 | Option | Cost | Command |
@@ -93,7 +117,9 @@ Details: [voice.md](skills/startup-video/references/voice.md). Put keys in `.env
 | Path | What |
 | --- | --- |
 | [skills/startup-video/](skills/startup-video/) | The producer skill and its references: [recipes](skills/startup-video/references/recipes.md), [script writing](skills/startup-video/references/script.md), [voice](skills/startup-video/references/voice.md), [delivery](skills/startup-video/references/delivery.md) |
-| [brief.example.md](brief.example.md) | The brief template |
+| [brands/](brands/) | Brand memory, one folder per brand ([example](brands/startup-video-kit/brand.json)) |
+| [scripts/brand.mjs](scripts/brand.mjs) | `init`, `check`, `list`, `use`, `log` for brand memory |
+| [brief.example.md](brief.example.md) | The per-video brief template |
 | [scripts/voiceover.mjs](scripts/voiceover.mjs) | ElevenLabs voice + word timings, no dependencies |
 | [setup/](setup/) | One-command setup for Windows, macOS, Linux |
 | [videos/example-launch/](videos/example-launch/) | A finished project: brief, script, scenes, voice, captions, render |

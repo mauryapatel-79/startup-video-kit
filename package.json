@@ -9,6 +9,7 @@
   "scripts": {
     "doctor": "npx hyperframes doctor",
     "voice": "node scripts/voiceover.mjs",
-    "test": "node --test scripts/voiceover.test.mjs"
+    "brand": "node scripts/brand.mjs",
+    "test": "node --test scripts/voiceover.test.mjs scripts/brand.test.mjs"
   }
 }

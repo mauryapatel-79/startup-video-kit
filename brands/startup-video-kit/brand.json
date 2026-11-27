@@ -1,0 +1,57 @@
+{
+  "slug": "startup-video-kit",
+  "name": "Startup Video Kit",
+  "website": "https://github.com/mauryapatel-79/startup-video-kit",
+  "status": "ready",
+  "updated": "2026-11-27",
+  "identity": {
+    "tagline": "Free and open source",
+    "oneLiner": "Founders get a launch video from their coding agent instead of a video editor.",
+    "category": "Developer tool / AI video",
+    "audience": "Solo founders and small SaaS teams who already use Claude Code or Codex"
+  },
+  "features": [
+    { "name": "URL to video", "description": "Paste a website, get a script, voiceover, captions and sound.", "source": "README.md" },
+    { "name": "Free local voice", "description": "Kokoro on your machine by default; ElevenLabs or HeyGen when you want premium.", "source": "README.md" },
+    { "name": "Every format", "description": "Renders 16:9, 9:16 and 1:1.", "source": "README.md" },
+    { "name": "Brand memory", "description": "Each brand's facts, colours, fonts and logos are captured once and reused.", "source": "skills/startup-video/references/brand.md" }
+  ],
+  "facts": [
+    {
+      "id": "example-render-time",
+      "claim": "The example launch film rendered in about a minute on a laptop",
+      "value": "1m05s for 22 s of 1080p video",
+      "kind": "stat",
+      "source": "videos/example-launch/CREDITS.md",
+      "captured": "2026-11-27",
+      "verified": true,
+      "note": "Measured on an i5-13420H laptop"
+    },
+    {
+      "id": "license",
+      "claim": "MIT licensed",
+      "value": "MIT",
+      "kind": "feature",
+      "source": "LICENSE",
+      "captured": "2026-11-27",
+      "verified": true
+    }
+  ],
+  "pricing": [{ "plan": "Open source", "price": "$0", "period": "", "note": "Premium voices and music are optional and billed by their providers", "source": "README.md" }],
+  "integrations": ["Claude Code", "Codex", "Cursor", "Gemini CLI", "HyperFrames", "ElevenLabs", "HeyGen"],
+  "cta": { "primary": "Star it on GitHub", "url": "https://github.com/mauryapatel-79/startup-video-kit", "offer": "Free and open source", "secondary": "" },
+  "voice": { "provider": "kokoro", "voice": "af_heart", "tone": "developer-plain, warm", "wordsPerMinute": 150 },
+  "rules": {
+    "say": ["coding agent", "launch video", "free and open source"],
+    "never": ["revolutionize", "game-changer", "claims about render speed on machines we have not measured"]
+  },
+  "visual": {
+    "colors": { "primary": "#FF6A3D", "background": "#0B0D12", "text": "#F4F1EA" },
+    "palette": ["#FF6A3D", "#0B0D12", "#F4F1EA", "#8A8F9C"],
+    "fonts": [],
+    "logos": { "wordmark": null, "mark": null },
+    "style": "Dark ground, warm orange accent, Inter + JetBrains Mono (bundled with HyperFrames, no font files needed)"
+  },
+  "sources": [{ "url": "https://github.com/mauryapatel-79/startup-video-kit", "captured": "2026-11-27", "text": "README.md" }],
+  "history": [{ "date": "2026-11-27", "video": "videos/example-launch", "recipe": "launch", "renders": ["example-launch-16x9.mp4"] }]
+}

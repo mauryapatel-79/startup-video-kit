@@ -3,6 +3,11 @@
 .env.*
 !.env.example
 
+# your brands stay local (the kit's own brand is the committed example)
+brands/*
+!brands/README.md
+!brands/startup-video-kit/
+
 # your videos stay local (the example is committed)
 videos/*
 !videos/README.md

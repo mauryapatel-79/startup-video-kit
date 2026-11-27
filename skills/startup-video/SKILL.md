@@ -19,13 +19,15 @@ Node 22+, FFmpeg and Chrome must pass. Kokoro (free local voice) and Parakeet/wh
 
 On Windows, keep the kit in a short path such as `C:\dev\startup-video-kit`: Kokoro and Chrome fail to write files once a path passes 260 characters.
 
-## 1. Brief
+## 1. Brand, then brief
 
-Every video starts from `videos/<slug>/BRIEF.md`, copied from `brief.example.md` at the kit root.
+Brand facts are captured once and kept in `brands/<slug>/brand.json`. Follow [references/brand.md](references/brand.md):
 
-- **Person gave a URL** → run `npx hyperframes capture <url> --json` and fill the brief yourself: product name, one-line promise, audience, three features, proof (numbers, logos, quotes), brand colours, fonts, logo.
+- `node scripts/brand.mjs list`. **Brand exists** → read its `brand.json`; do not re-capture the site. Run `check`; re-capture only when it flags stale facts or the person says something changed.
+- **New brand** → `node scripts/brand.mjs init <url>`, fill the draft from `sources/`, confirm with the person, set `status: "ready"`.
 - **Person gave nothing** → ask for the URL or a two-line description. Nothing else yet.
-- Ask only what you cannot infer, in one message: **video type, length, aspect ratios, call to action, voice (free local / premium)**. Default everything else and say what you defaulted.
+
+Then write `videos/<slug>/BRIEF.md` (template: `brief.example.md`) for this one video. Product facts come from `brand.json`; the brief only adds what is specific to this video. Ask only what neither holds, in one message: **video type, length, aspect ratios, call to action, voice**. A voice already in `brand.json` is the default. Default everything else and say what you defaulted.
 
 ## 2. Pick the recipe
 
@@ -38,7 +40,7 @@ Write `videos/<slug>/SCRIPT.md` with [references/script.md](references/script.md
 - One table: scene, seconds, on-screen text, narration, what is shown.
 - Narration word count ≤ the recipe's budget (2.5 words per second at 150 wpm). Count it and print the count.
 - The hook lands in the first 2 seconds. The CTA is one action and is on screen for at least 3 seconds.
-- No claim the brief does not support. Numbers come from the brief or the site, never invented.
+- No claim `brand.json` does not hold. Numbers come from its `facts`, never invented; a new fact is added there, with its source, before it is used.
 
 Show the script and wait for approval unless the person asked for no stops.
 
@@ -51,7 +53,7 @@ Real screens beat drawn ones. In order of preference:
 3. The running app: take screenshots with Playwright (`npx playwright screenshot --viewport-size=1920,1080 <url> assets/screens/<name>.png`), or record a flow with Playwright's `video` option. Use a test account only; never type real credentials.
 4. Rebuild a UI screen in HTML only when no real one can be captured, and keep it faithful to the product's design tokens.
 
-Logos come from `/media-use` (`--type logo`), never redrawn.
+Logos, fonts and colours come from the brand: `node scripts/brand.mjs use <brand> videos/<slug>` copies them into `assets/brand/` and writes `brand.css`. Never redraw a logo. The brand's `screens/` folder holds the last site capture; reuse it before capturing again.
 
 ## 5. Voice and captions
 
@@ -95,9 +97,11 @@ Render only after the person approves the preview, asks for the file, or asked f
 
 Follow [references/delivery.md](references/delivery.md): one master plus the cuts each channel needs (16:9, 9:16, 1:1), loudness-normalised, with burned-in captions on vertical cuts, a poster frame and a muted hero loop if the brief asks for one. Finish with a list of files, their length, size and where each goes.
 
+Then write back to the brand: `node scripts/brand.mjs log <brand> videos/<slug> --recipe <recipe>`, plus any fact, voice choice or rule the person gave you during this video.
+
 ## Hard rules
 
-- Never invent customers, logos, metrics, quotes or prices.
+- Never invent customers, logos, metrics, quotes or prices. Never use one brand's facts or assets in another brand's video.
 - Never put a real password, card or API key on screen. Blur or replace secrets in captured UI.
 - Music and SFX must have a licence that allows commercial use; record the source in `videos/<slug>/CREDITS.md`.
 - Keep keys in `.env`; never write them into a composition or a commit.

@@ -1,42 +1,32 @@
 # Video brief
 
-Copy to `videos/<slug>/BRIEF.md`. Fill what you know; the agent fills the rest from your website and tells you what it assumed.
+Copy to `videos/<slug>/BRIEF.md`. Product facts, colours, fonts, logos and voice come from the brand's memory, so this file only holds what is specific to **this** video.
 
-## Product
+## Brand
 
-- **Name:**
-- **Website:**
-- **One-line promise** (what it does for whom):
-- **Audience** (role, company size, what they use today):
-- **Top 3 features** (in the user's words, not yours):
-  1.
-  2.
-  3.
-- **Proof** (real numbers, customer logos you may show, a quote with permission):
+- **Brand:** `brands/<brand>/brand.json` (create it once with `node scripts/brand.mjs init <url>`)
+- **Facts this video uses** (ids from `brand.json` facts):
+- **Anything new or changed since the brand was captured** (add it to `brand.json` too):
 
 ## Video
 
 - **Type:** launch film / product demo / social ad / feature announcement / explainer / hero loop / changelog
+- **Feature or story in focus:**
 - **Length (seconds):**
 - **Aspect ratios:** 16:9 / 9:16 / 1:1
 - **Where it will be posted:**
-- **Call to action** (one action + one URL):
+- **Call to action:** (default: `cta` in brand.json)
 
 ## Voice and sound
 
-- **Voice:** free local (Kokoro) / ElevenLabs / HeyGen / my own recording / none
-- **Tone:** friendly / developer-plain / enterprise-calm / energetic
-- **Language:**
+- **Voice:** (default: `voice` in brand.json) free local (Kokoro) / ElevenLabs / HeyGen / my own recording / none
 - **Music mood:**
 
-## Brand
+## References
 
-- **Colours** (hex):
-- **Fonts:**
-- **Logo file** (put it in `videos/<slug>/assets/`):
 - **Videos you like** (links):
-- **Must not say or show:**
+- **Must not say or show in this video** (brand-wide rules go in brand.json `rules.never`):
 
-## Assets you have
+## Assets for this video
 
 Screen recordings, screenshots, a test account for the app (never your real password), a founder voice memo. Put files in `videos/<slug>/assets/`.
