@@ -52,6 +52,13 @@ Make a 45-second launch video for https://your-startup.com
 
 The agent fills a brief from your site, shows you the script, builds the scenes, opens a live preview, and renders when you approve.
 
+**Already have a project?** Add just the skills to it, no clone needed:
+
+```bash
+npx hyperframes skills update
+npx skills add mauryapatel-79/startup-video-kit
+```
+
 ### Setup flags
 
 | Windows | macOS / Linux | Adds |
