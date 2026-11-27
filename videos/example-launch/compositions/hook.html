@@ -1,0 +1,24 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding-left: 220px; gap: 28px; color: var(--ink); }
+    #hook-l1 { font-size: 104px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; }
+    #hook-l2 { font-size: 104px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; color: #8a8f9c; position: relative; display: inline-block; }
+    #hook-l2-wrap { display: flex; }
+    #hook-strike { position: absolute; left: -8px; right: -8px; top: 52%; height: 14px; background: var(--accent); transform-origin: left center; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1920" data-height="1080">
+    <div id="hook-l1">Your startup needs a launch video.</div>
+    <div id="hook-l2-wrap">
+      <div id="hook-l2">You don't need a video editor.<div id="hook-strike"></div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#hook-l1", { scale: 1.04 }, { scale: 1, duration: 1.2, ease: "power2.out" }, 0);
+    tl.fromTo("#hook-l2", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "power4.out" }, 1.9);
+    tl.fromTo("#hook-strike", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.inOut" }, 3.0);
+    tl.to("#hook-l1", { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 3.72);
+    tl.to("#hook-l2", { opacity: 0, y: -30, duration: 0.25, ease: "power2.in" }, 3.72);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

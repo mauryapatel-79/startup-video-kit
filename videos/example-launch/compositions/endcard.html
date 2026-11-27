@@ -1,0 +1,24 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 34px; color: var(--ink); }
+    #end-mark { display: flex; align-items: center; gap: 30px; }
+    #end-icon { width: 120px; height: 120px; border-radius: 30px; background: var(--accent); display: flex; align-items: center; justify-content: center; }
+    #end-play { width: 0; height: 0; border-top: 30px solid transparent; border-bottom: 30px solid transparent; border-left: 48px solid #0b0d12; margin-left: 10px; }
+    #end-word { font: 900 112px "Inter", sans-serif; letter-spacing: -0.04em; }
+    #end-sub { font: 400 44px "Inter", sans-serif; color: #b8bcc6; }
+    #end-cta { margin-top: 26px; padding: 26px 46px; border-radius: 999px; border: 3px solid var(--accent); font: 500 40px "JetBrains Mono", monospace; }
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+    <div id="end-mark"><div id="end-icon"><div id="end-play"></div></div><div id="end-word">Startup Video Kit</div></div>
+    <div id="end-sub">Free and open source</div>
+    <div id="end-cta">github.com/mauryapatel-79/startup-video-kit</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#end-icon", { scale: 0, rotation: -20 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2)" }, 0);
+    tl.fromTo("#end-word", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.5, ease: "power4.out" }, 0.25);
+    tl.fromTo("#end-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 1.5);
+    tl.fromTo("#end-cta", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 2.5);
+    window.__timelines["endcard"] = tl;
+  </script>
+</template>

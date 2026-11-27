@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:01,760
+Your startup needs a launch video.
+
+2
+00:00:01,920 --> 00:00:03,600
+You don't need a video editor.
+
+3
+00:00:03,600 --> 00:00:06,160
+Open Startup Video Kit in Claude Code or
+
+4
+00:00:06,160 --> 00:00:08,160
+Codex and paste your website.
+
+5
+00:00:08,160 --> 00:00:10,400
+The agent writes the script, records the
+
+6
+00:00:10,400 --> 00:00:13,040
+voiceover, and adds captions and sound.
+
+7
+00:00:13,040 --> 00:00:15,520
+Then it renders every format you need.
+
+8
+00:00:15,520 --> 00:00:17,040
+Startup Video Kit.
+
+9
+00:00:17,040 --> 00:00:18,480
+Free and open source.

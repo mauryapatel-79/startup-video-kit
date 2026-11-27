@@ -1,0 +1,24 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# your videos stay local (the example is committed)
+videos/*
+!videos/README.md
+!videos/example-launch/
+videos/example-launch/renders/*.mp4
+!videos/example-launch/renders/example-launch-16x9.mp4
+
+# installed agent skills (restored by the setup script)
+.claude/skills/
+.agents/skills/
+.codex/skills/
+.cursor/skills/
+skills-lock.json
+
+node_modules/
+.hyperframes/
+*.log
+.DS_Store
+Thumbs.db

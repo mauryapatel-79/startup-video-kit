@@ -1,0 +1,78 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; }
+    .cap-group { position: absolute; left: 0; right: 0; bottom: 140px; display: flex; justify-content: center; }
+    .cap-pill { padding: 14px 30px; border-radius: 16px; background: rgba(11,13,18,.78); font: 700 46px "Inter", sans-serif; color: #f4f1ea; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1920" data-height="1080">
+    <div id="cap-g0" class="cap-group clip" data-start="0.2" data-duration="1.92"><div class="cap-pill"><span id="cap-w0">Your</span> <span id="cap-w1">startup</span> <span id="cap-w2">needs</span> <span id="cap-w3">a</span> <span id="cap-w4">launch</span> <span id="cap-w5">video.</span></div></div>
+    <div id="cap-g1" class="cap-group clip" data-start="2.12" data-duration="1.68"><div class="cap-pill"><span id="cap-w6">You</span> <span id="cap-w7">don't</span> <span id="cap-w8">need</span> <span id="cap-w9">a</span> <span id="cap-w10">video</span> <span id="cap-w11">editor.</span></div></div>
+    <div id="cap-g2" class="cap-group clip" data-start="3.8" data-duration="1.60"><div class="cap-pill"><span id="cap-w12">Open</span> <span id="cap-w13">Startup</span> <span id="cap-w14">Video</span> <span id="cap-w15">Kit</span> <span id="cap-w16">in</span></div></div>
+    <div id="cap-g3" class="cap-group clip" data-start="5.4" data-duration="1.68"><div class="cap-pill"><span id="cap-w17">Claude</span> <span id="cap-w18">Code</span> <span id="cap-w19">or</span> <span id="cap-w20">Codex</span> <span id="cap-w21">and</span></div></div>
+    <div id="cap-g4" class="cap-group clip" data-start="7.08" data-duration="1.28"><div class="cap-pill"><span id="cap-w22">paste</span> <span id="cap-w23">your</span> <span id="cap-w24">website.</span></div></div>
+    <div id="cap-g5" class="cap-group clip" data-start="8.36" data-duration="1.68"><div class="cap-pill"><span id="cap-w25">The</span> <span id="cap-w26">agent</span> <span id="cap-w27">writes</span> <span id="cap-w28">the</span> <span id="cap-w29">script,</span></div></div>
+    <div id="cap-g6" class="cap-group clip" data-start="10.04" data-duration="1.28"><div class="cap-pill"><span id="cap-w30">records</span> <span id="cap-w31">the</span> <span id="cap-w32">voiceover,</span></div></div>
+    <div id="cap-g7" class="cap-group clip" data-start="11.32" data-duration="1.92"><div class="cap-pill"><span id="cap-w33">and</span> <span id="cap-w34">adds</span> <span id="cap-w35">captions</span> <span id="cap-w36">and</span> <span id="cap-w37">sound.</span></div></div>
+    <div id="cap-g8" class="cap-group clip" data-start="13.24" data-duration="1.76"><div class="cap-pill"><span id="cap-w38">Then</span> <span id="cap-w39">it</span> <span id="cap-w40">renders</span> <span id="cap-w41">every</span> <span id="cap-w42">format</span></div></div>
+    <div id="cap-g9" class="cap-group clip" data-start="15" data-duration="1.02"><div class="cap-pill"><span id="cap-w43">you</span> <span id="cap-w44">need.</span></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#cap-g0", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 0.2);
+    tl.fromTo("#cap-w0", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 0.20);
+    tl.fromTo("#cap-w1", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 0.44);
+    tl.fromTo("#cap-w2", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 0.92);
+    tl.fromTo("#cap-w3", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 1.16);
+    tl.fromTo("#cap-w4", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 1.24);
+    tl.fromTo("#cap-w5", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 1.56);
+    tl.fromTo("#cap-g1", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 2.12);
+    tl.fromTo("#cap-w6", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 2.12);
+    tl.fromTo("#cap-w7", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 2.28);
+    tl.fromTo("#cap-w8", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 2.44);
+    tl.fromTo("#cap-w9", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 2.60);
+    tl.fromTo("#cap-w10", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 2.68);
+    tl.fromTo("#cap-w11", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 3.00);
+    tl.fromTo("#cap-g2", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 3.8);
+    tl.fromTo("#cap-w12", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 3.80);
+    tl.fromTo("#cap-w13", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 4.20);
+    tl.fromTo("#cap-w14", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 4.68);
+    tl.fromTo("#cap-w15", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 5.00);
+    tl.fromTo("#cap-w16", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 5.24);
+    tl.fromTo("#cap-g3", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 5.4);
+    tl.fromTo("#cap-w17", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 5.40);
+    tl.fromTo("#cap-w18", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 5.96);
+    tl.fromTo("#cap-w19", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 6.20);
+    tl.fromTo("#cap-w20", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 6.36);
+    tl.fromTo("#cap-w21", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 6.92);
+    tl.fromTo("#cap-g4", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 7.08);
+    tl.fromTo("#cap-w22", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 7.08);
+    tl.fromTo("#cap-w23", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 7.48);
+    tl.fromTo("#cap-w24", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 7.64);
+    tl.fromTo("#cap-g5", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 8.36);
+    tl.fromTo("#cap-w25", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 8.36);
+    tl.fromTo("#cap-w26", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 8.52);
+    tl.fromTo("#cap-w27", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 9.00);
+    tl.fromTo("#cap-w28", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 9.32);
+    tl.fromTo("#cap-w29", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 9.48);
+    tl.fromTo("#cap-g6", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 10.04);
+    tl.fromTo("#cap-w30", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 10.04);
+    tl.fromTo("#cap-w31", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 10.52);
+    tl.fromTo("#cap-w32", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 10.60);
+    tl.fromTo("#cap-g7", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 11.32);
+    tl.fromTo("#cap-w33", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 11.32);
+    tl.fromTo("#cap-w34", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 11.48);
+    tl.fromTo("#cap-w35", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 11.80);
+    tl.fromTo("#cap-w36", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 12.28);
+    tl.fromTo("#cap-w37", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 12.52);
+    tl.fromTo("#cap-g8", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 13.24);
+    tl.fromTo("#cap-w38", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 13.24);
+    tl.fromTo("#cap-w39", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 13.48);
+    tl.fromTo("#cap-w40", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 13.72);
+    tl.fromTo("#cap-w41", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 14.20);
+    tl.fromTo("#cap-w42", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 14.52);
+    tl.fromTo("#cap-g9", { opacity: 0 }, { opacity: 1, duration: 0.12 }, 15);
+    tl.fromTo("#cap-w43", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 15.00);
+    tl.fromTo("#cap-w44", { color: "#f4f1ea" }, { color: "#ff6a3d", duration: 0.05 }, 15.16);
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

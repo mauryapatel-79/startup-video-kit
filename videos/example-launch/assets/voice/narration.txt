@@ -1,0 +1,9 @@
+Your startup needs a launch video. You don't need a video editor.
+
+Open Startup Video Kit in Claude Code or Codex, and paste your website.
+
+The agent writes the script, records the voiceover, and adds captions and sound.
+
+Then it renders every format you need.
+
+Startup Video Kit. Free and open source.

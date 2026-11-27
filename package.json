@@ -1,0 +1,14 @@
+{
+  "name": "startup-video-kit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Make launch, demo and social videos for your startup with Claude Code, Codex or any coding agent. HyperFrames + free local voice + optional ElevenLabs.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "doctor": "npx hyperframes doctor",
+    "voice": "node scripts/voiceover.mjs",
+    "test": "node --test scripts/voiceover.test.mjs"
+  }
+}
