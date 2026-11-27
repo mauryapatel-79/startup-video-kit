@@ -15,7 +15,7 @@ It depends on the HyperFrames skills (`/hyperframes`, `/hyperframes-cli`, `/hype
 
 | Path | What |
 | --- | --- |
-| `skills/startup-video/` | The producer skill: brand → brief → script → voice → build → deliver |
+| `skills/startup-video/` | The producer skill: brand → intake questions → script → voice → build → deliver |
 | `brands/<slug>/` | Brand memory: facts with sources, colours, fonts, logos, voice, rules, video history. Read it before any video; never re-research what is there. |
 | `scripts/brand.mjs` | `init` / `check` / `list` / `use` / `log` for brand memory |
 | `brief.example.md` | Brief template, copied per video |

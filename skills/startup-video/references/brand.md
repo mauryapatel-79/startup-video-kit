@@ -33,6 +33,7 @@ node scripts/brand.mjs init https://acme.com --force     # re-capture sources; b
    - `pricing`, `integrations`, `cta` (primary action, URL, offer, secondary).
    - `voice`: provider and voice id once the person picks one; `tone`.
    - `rules.say` / `rules.never`: words the brand uses, claims or competitors it must not mention.
+   - `defaults` (written after the first intake, see `intake.md`): `{ "platforms", "music", "paid" }`. The next video pre-picks these as the recommended answers.
    - Confirm `visual.colors.primary` and the logo picks by looking at the screenshots.
    - Set `"status": "ready"` and run `check` until it has no errors.
 4. **Use it.** `use <slug> <video-dir>` copies the fonts and logos into the project and writes `assets/brand/brand.css`. Paste its `@font-face` lines into each scene's `<style>` (HyperFrames checks fonts per file) and use the `--brand-*` colour variables.

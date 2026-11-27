@@ -1,6 +1,6 @@
 # Startup Video Kit
 
-Make launch videos, product demos and social ads for your startup with **Claude Code, Codex, Cursor or any coding agent**. Paste your website, approve the script, get an MP4 in every format you need.
+Make launch videos, demos, ads, customer stories, hiring and investor videos for your startup with **Claude Code, Codex, Cursor or any coding agent**. Paste your website, approve the script, get an MP4 in every format you need.
 
 [![Example launch video made with this kit](videos/example-launch/renders/example-launch-poster.png)](videos/example-launch/renders/example-launch-16x9.mp4)
 
@@ -17,7 +17,7 @@ your URL ──► brand.json ──► BRIEF.md ──► SCRIPT.md ──► v
 - **Engine:** [HyperFrames](https://github.com/heygen-com/hyperframes) (open source, by HeyGen). Agents write HTML/CSS/GSAP; it renders frame-perfect MP4.
 - **Producer skill:** [`skills/startup-video`](skills/startup-video/SKILL.md) turns "make a video for my startup" into a brief, a script inside a word budget, real product screens, voice, captions, sound and every delivery format.
 - **Voice:** free on-device Kokoro by default; ElevenLabs or HeyGen when you want premium.
-- **Recipes:** launch film, product demo, social ad, feature announcement, explainer, hero loop, changelog. [See them](skills/startup-video/references/recipes.md).
+- **Goal-driven, not just intro videos:** 13 recipes - launch, demo, ad, feature, explainer, customer story, personal brand ("hire me"), investor teaser, recruiting, tutorial, event promo, hero loop, changelog. The agent asks your goal first and picks one. [See them](skills/startup-video/references/recipes.md) · [the questions](skills/startup-video/references/intake.md).
 
 ## Quick start
 
@@ -43,14 +43,26 @@ bash setup/setup.sh --local-voice --captions
 Then open the folder in your agent and ask:
 
 ```text
-Make a 45-second launch video for https://your-startup.com
+Make a video for https://your-startup.com
 ```
+
+That's enough. The agent reads your site, then asks a few plain questions, each with a recommended answer already picked:
+
+| Round | It asks | You pick from |
+| --- | --- | --- |
+| 1 | What should this video do? | Launch · show how it works · get sign-ups (ad) · new feature · explain the problem · customer story · get hired · raise money · hire people · teach a task · event promo · website loop · release notes (it offers the 4 that fit your site best) |
+| 1 | Which voice? | Free female · free male · ElevenLabs · no voice · or your own recording |
+| 2 | Where will you post it? | A recommended mix for your goal, e.g. Reels + LinkedIn (9:16 + 1:1), or everywhere |
+| 2 | What to focus on, paid or organic, how long | Your pains, features, projects or roles from your site; length range of that kind of video |
+| 2 | Only if still unclear | Audience · what viewers should do next · music · a missing number or testimonial |
+
+In Claude Code these are clickable; in Codex and other agents you reply like `1A 2B`, or "go" to accept every recommendation. Then it writes the script for you to approve, builds the scenes, opens a live preview and renders every format you picked. Your voice, platforms and music are saved with the brand, so the next video already has them picked.
+
+You can also skip the questions:
 
 ```text
-/startup-video  30-second vertical ad for our new AI inbox feature, captions on, energetic
+/startup-video  30-second vertical ad for our new AI inbox feature, captions on, energetic, just make it
 ```
-
-The agent fills a brief from your site, shows you the script, builds the scenes, opens a live preview, and renders when you approve.
 
 **Already have a project?** Add just the skills to it, no clone needed:
 
